@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="en" data-title-fr="Tempo Intelligence — Construction : trouvez le travail pas facturé">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tempo Intelligence for Builders — Find the work you forgot to bill</title>
+<meta name="description" content="We look at your last 90 days of jobs and find extra work you never billed. If we find less than $10,000, you pay nothing.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a href="index.html" class="logo">
+      <svg class="logo-mark" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="8" fill="#1f5eff"/><path d="M14 24 21 8" stroke="#fff" stroke-width="3" stroke-linecap="round"/><circle cx="10" cy="11" r="2" fill="#fff"/></svg>
+      Tempo <span class="logo-sub">Intelligence</span>
+    </a>
+    <div class="nav-r">
+      <div class="nav-links">
+        <a href="#leaks" data-i18n="nav.leaks">Where money gets lost</a>
+        <a href="#how" data-i18n="nav.how">How it works</a>
+        <a href="#faq">FAQ</a>
+      </div>
+      <div class="lang" role="group" aria-label="Language"><button data-lang="en" class="on">EN</button><i></i><button data-lang="fr">FR</button></div>
+      <a href="#book" class="btn btn-sm" data-i18n="nav.cta">Free check</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero center">
+  <div class="wrap">
+    <span class="eyebrow" data-i18n="hero.eyebrow">For builders and contractors</span>
+    <h1 data-i18n-html="hero.h1">We find $10,000+ in work you forgot to bill <span class="dim">— or you pay nothing.</span></h1>
+    <p class="sub" data-i18n="hero.sub">Did your team do extra work that never got on a bill? Most builders did. We look at your last 90 days of jobs and find it.</p>
+    <a href="#book" class="btn" data-i18n="hero.cta">Find my missing money</a>
+    <p class="fine" data-i18n="hero.fine">We look at your last 90 days · We can't change anything · You keep the list</p>
+
+    <div class="stats reveal">
+      <div><b data-i18n="st.1v">Extras</b><p data-i18n="st.1">Extra work the client said yes to, but never got billed</p></div>
+      <div><b data-i18n="st.2v">Slips</b><p data-i18n="st.2">Work slips from the job site that never got to the office</p></div>
+      <div><b data-i18n="st.3v">Late</b><p data-i18n="st.3">Bills sent late, so you get paid late</p></div>
+    </div>
+    <p class="stats-cap" data-i18n="st.cap">The three places we find missing money most often.</p>
+  </div>
+</header>
+
+<section class="band center" id="leaks">
+  <div class="wrap">
+    <span class="eyebrow" data-i18n="lk.eyebrow">Where money gets lost</span>
+    <h2 data-i18n="lk.h2">You did the work. You just didn't bill it.</h2>
+    <p class="sub" data-i18n="lk.sub">Jobs are busy. Small yeses get lost between the job site, the boss and the office. Nobody notices until the job is done.</p>
+    <div class="leaks">
+      <div class="card reveal"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z"/><path d="m4 7 8 6 8-6"/></svg></div><div><h3 data-i18n="lk.1h">Yeses lost in email</h3><p data-i18n="lk.1">The client said yes by email or text. Your crew did the work. The bill never changed.</p></div></div>
+      <div class="card reveal"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6l1 3h4v15H4V6h4z"/><path d="M9 12h6M9 16h4"/></svg></div><div><h3 data-i18n="lk.2h">Job slips that never show up</h3><p data-i18n="lk.2">Paper slips in a truck. Photos on a phone. If the office never sees it, nobody bills it.</p></div></div>
+      <div class="card reveal"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div><div><h3 data-i18n="lk.3h">Bills that go out late</h3><p data-i18n="lk.3">Bills made by hand take weeks. Late bills mean late pay.</p></div></div>
+      <div class="card reveal"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 6H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div><div><h3 data-i18n="lk.4h">Money held back that nobody asked for</h3><p data-i18n="lk.4">Clients often keep part of the pay until the end. Sometimes nobody asks for it back.</p></div></div>
+    </div>
+
+    <div class="guarantee reveal">
+      <div class="seal">$10K<small data-i18n="g.seal">or it's free</small></div>
+      <div>
+        <h3 data-i18n="g.h">If we find less than $10,000, you pay nothing.</h3>
+        <p data-i18n="g.p">We give you a clear list: which job, what work, and how much. If it adds up to less than $10,000, the check is free.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="center" id="how">
+  <div class="wrap">
+    <span class="eyebrow" data-i18n="how.eyebrow">How it works</span>
+    <h2 data-i18n="how.h2">Four steps. About two weeks.</h2>
+    <p class="sub" data-i18n="how.sub">You don't change how you work. We just look.</p>
+    <div class="steps reveal">
+      <svg class="pulse-line" viewBox="0 0 600 40" preserveAspectRatio="none" aria-hidden="true">
+        <path class="ecg-base" pathLength="1000" vector-effect="non-scaling-stroke" d="M0 20 H70 L78 16 L84 20 L90 20 L96 3 L104 37 L111 12 L116 20 H270 L278 16 L284 20 L290 20 L296 3 L304 37 L311 12 L316 20 H470 L478 16 L484 20 L490 20 L496 3 L504 37 L511 12 L516 20 H600"/>
+        <path class="ecg-beat" pathLength="1000" vector-effect="non-scaling-stroke" d="M0 20 H70 L78 16 L84 20 L90 20 L96 3 L104 37 L111 12 L116 20 H270 L278 16 L284 20 L290 20 L296 3 L304 37 L311 12 L316 20 H470 L478 16 L484 20 L490 20 L496 3 L504 37 L511 12 L516 20 H600"/>
+      </svg>
+      <div class="step"><div class="dot">1</div><span class="k" data-i18n="how.1k">30 minutes</span><h3 data-i18n="how.1h">Quick call</h3><p data-i18n="how.1">We learn how a job goes from price quote to final bill.</p></div>
+      <div class="step"><div class="dot">2</div><span class="k" data-i18n="how.2k">Look only</span><h3 data-i18n="how.2h">Safe access</h3><p data-i18n="how.2">You let us look at your books and job files. We can't change anything.</p></div>
+      <div class="step"><div class="dot">3</div><span class="k" data-i18n="how.3k">Compare</span><h3 data-i18n="how.3h">We check</h3><p data-i18n="how.3">We match the work you did to the bills you sent.</p></div>
+      <div class="step"><div class="dot">4</div><span class="k" data-i18n="how.4k">Your list</span><h3 data-i18n="how.4h">Ready to bill</h3><p data-i18n="how.4">Every missed item, by job, with the amount and the proof.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="band center" id="fix">
+  <div class="wrap">
+    <span class="eyebrow" data-i18n="fx.eyebrow">Then we fix it for good</span>
+    <h2 data-i18n="fx.h2">Get paid once. Then never miss it again.</h2>
+    <p class="sub" data-i18n="fx.sub">The check finds the money. Our tools stop it from happening on your next job.</p>
+    <div class="cards">
+      <div class="card reveal"><div class="num">1</div><h3 data-i18n="fx.1h">Every yes goes on the bill.</h3><p data-i18n="fx.1">When a client says yes to extra work, it gets added to the next bill by itself.</p></div>
+      <div class="card reveal"><div class="num">2</div><h3 data-i18n="fx.2h">Job slips reach the office the same day.</h3><p data-i18n="fx.2">Your crew takes a photo or fills a short form. It shows up in QuickBooks, on the right job.</p></div>
+      <div class="card reveal"><div class="num">3</div><h3 data-i18n="fx.3h">Bills that make themselves.</h3><p data-i18n="fx.3">Your manager checks and says OK. The bill and the reminders go out on time.</p></div>
+    </div>
+    <div class="tools reveal">
+      <span>QuickBooks</span><span>Sage</span><span>Procore</span><span>Buildertrend</span><span>Excel</span><span>Outlook / Gmail</span><span data-i18n="fx.more">+ the apps you already use</span>
+    </div>
+  </div>
+</section>
+
+<section class="center" id="faq">
+  <div class="wrap">
+    <span class="eyebrow">FAQ</span>
+    <h2 data-i18n="f.h2">Questions, answered.</h2>
+    <div class="faq">
+      <details open><summary data-i18n="f.1q">How much does the check cost?</summary><p data-i18n="f.1a">We agree on a price before we start. You only pay if we find $10,000 or more. If we find less, you pay nothing.</p></details>
+      <details><summary data-i18n="f.2q">Do you need to get into our systems?</summary><p data-i18n="f.2a">Only to look. We can't change, send or delete anything. You can turn off our access any time.</p></details>
+      <details><summary data-i18n="f.3q">What if the client said yes out loud?</summary><p data-i18n="f.3a">We point out work that was clearly done but never billed. Your manager checks with the client before sending a bill.</p></details>
+      <details><summary data-i18n="f.4q">Do we have to buy more after?</summary><p data-i18n="f.4a">No. The list is yours either way. If you want it to stop happening, we'll show you the price and how fast it pays off.</p></details>
+      <details><summary data-i18n="f.5q">Do you speak French?</summary><p data-i18n="f.5a">Yes. The check, the list and the tools can all be in English or French.</p></details>
+    </div>
+    <div class="checks">
+      <span data-i18n="ck.1">$10K+ or it's free</span><span data-i18n="ck.2">We only look</span><span data-i18n="ck.3">You keep the list</span><span data-i18n="ck.4">English &amp; French</span>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="book">
+  <div class="wrap final">
+    <div>
+      <span class="eyebrow" data-i18n="b.eyebrow">Free check</span>
+      <h2 data-i18n="b.h2">Find the money you're already owed.</h2>
+      <p class="sub" data-i18n="b.sub">Tell us a bit about your company. We'll set up a 30-minute call.</p>
+      <ul class="facts">
+        <li><b>90</b><span data-i18n="b.1">days of jobs checked</span></li>
+        <li><b>$10K</b><span data-i18n="b.2">found, or you pay nothing</span></li>
+        <li><b>0</b><span data-i18n="b.3">changes to how your team works</span></li>
+      </ul>
+    </div>
+    <form id="form" class="reveal">
+      <input type="hidden" name="industry" value="construction">
+      <div class="two">
+        <label><span data-i18n="fm.name">Your name</span><input name="name" required autocomplete="name" placeholder="Jane Tremblay"></label>
+        <label><span data-i18n="fm.email">Work email</span><input name="email" type="email" required autocomplete="email" placeholder="jane@company.ca"></label>
+      </div>
+      <div class="two">
+        <label><span data-i18n="fm.company">Company</span><input name="company" required autocomplete="organization" data-i18n-ph="fm.companyph" placeholder="Company name"></label>
+        <label><span data-i18n="fm.type">What do you build?</span>
+          <select name="type">
+            <option data-i18n="fm.t1">Big buildings and stores</option>
+            <option data-i18n="fm.t2">Houses and renos</option>
+            <option data-i18n="fm.t3">One trade (like electric or plumbing)</option>
+            <option data-i18n="fm.t4">Other</option>
+          </select></label>
+      </div>
+      <label><span data-i18n="fm.rev">How much do you bill each month?</span>
+        <select name="revenue"><option data-i18n="fm.r1">Under $250K</option><option>$250K – $800K</option><option selected>$800K – $2M</option><option data-i18n="fm.r4">Over $2M</option></select></label>
+      <label><span data-i18n="fm.tools">What apps do you use for jobs and money?</span><input name="tools" data-i18n-ph="fm.toolsph" placeholder="Example: QuickBooks and Excel"></label>
+      <button class="btn" type="submit" data-i18n="fm.submit">Find my missing money</button>
+      <p class="fine" data-i18n="fm.fine">We'll get back to you within one day.</p>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <a href="index.html" class="logo"><svg class="logo-mark" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="8" fill="#1f5eff"/><path d="M14 24 21 8" stroke="#fff" stroke-width="3" stroke-linecap="round"/><circle cx="10" cy="11" r="2" fill="#fff"/></svg>Tempo <span class="logo-sub">Intelligence</span></a>
+    <a href="index.html" data-i18n="ft.home">← Back to home</a>
+    <span>© <span class="yr"></span> Tempo Intelligence · EN | FR</span>
+  </div>
+</footer>
+
+<script>
+window.FR = {
+  "nav.leaks":"Où l'argent se perd","nav.how":"Comment ça marche","nav.cta":"Vérification gratuite",
+  "hero.eyebrow":"Pour les entrepreneurs en construction",
+  "hero.h1":"On trouve 10 000 $+ en travaux pas facturés <span class=\"dim\">— sinon, vous ne payez rien.</span>",
+  "hero.sub":"Votre équipe a fait des extras qui ne sont jamais allés sur une facture? C'est le cas de la plupart des entrepreneurs. On regarde vos chantiers des 90 derniers jours et on les trouve.",
+  "hero.cta":"Trouver mon argent perdu","hero.fine":"On regarde vos 90 derniers jours · On ne peut rien changer · La liste est à vous",
+  "st.1v":"Extras","st.1":"Des extras que le client a acceptés, mais qui n'ont jamais été facturés",
+  "st.2v":"Billets","st.2":"Des billets de chantier qui ne se sont jamais rendus au bureau",
+  "st.3v":"Retard","st.3":"Des factures envoyées en retard, donc vous êtes payé en retard",
+  "st.cap":"Les trois places où l'on trouve le plus souvent de l'argent perdu.",
+  "lk.eyebrow":"Où l'argent se perd","lk.h2":"Vous avez fait le travail. Vous ne l'avez juste pas facturé.",
+  "lk.sub":"Les chantiers roulent vite. Les petits « oui » se perdent entre le chantier, le boss et le bureau. Personne ne s'en rend compte avant la fin du chantier.",
+  "lk.1h":"Des « oui » perdus dans les courriels","lk.1":"Le client a dit oui par courriel ou par texto. Votre équipe a fait le travail. La facture, elle, n'a jamais changé.",
+  "lk.2h":"Des billets de chantier qui n'arrivent jamais","lk.2":"Des billets papier dans le camion. Des photos sur un cellulaire. Si le bureau ne les voit pas, personne ne les facture.",
+  "lk.3h":"Des factures qui partent en retard","lk.3":"Les factures faites à la main prennent des semaines. Facture en retard, paye en retard.",
+  "lk.4h":"Des retenues que personne n'a réclamées","lk.4":"Les clients gardent souvent une partie de la paye jusqu'à la fin. Des fois, personne ne la réclame.",
+  "g.seal":"ou c'est gratuit","g.h":"Si on trouve moins de 10 000 $, vous ne payez rien.",
+  "g.p":"On vous donne une liste claire : quel chantier, quel travail et combien. Si le total est moins de 10 000 $, la vérification est gratuite.",
+  "how.eyebrow":"Comment ça marche","how.h2":"Quatre étapes. Environ deux semaines.","how.sub":"Vous ne changez rien à votre façon de travailler. On fait juste regarder.",
+  "how.1k":"30 minutes","how.1h":"Petit appel","how.1":"On apprend comment un chantier passe de la soumission à la facture finale.",
+  "how.2k":"Lecture seulement","how.2h":"Accès sécuritaire","how.2":"Vous nous laissez regarder vos livres et vos dossiers de chantier. On ne peut rien changer.",
+  "how.3k":"Comparer","how.3h":"On vérifie","how.3":"On compare le travail fait avec les factures envoyées.",
+  "how.4k":"Votre liste","how.4h":"Prêt à facturer","how.4":"Chaque item oublié, par chantier, avec le montant et la preuve.",
+  "fx.eyebrow":"Ensuite, on règle ça pour de bon","fx.h2":"Faites-vous payer une fois. Puis ne l'échappez plus jamais.","fx.sub":"La vérification trouve l'argent. Nos outils empêchent que ça arrive au prochain chantier.",
+  "fx.1h":"Chaque « oui » va sur la facture.","fx.1":"Quand un client accepte un extra, il s'ajoute tout seul à la prochaine facture.",
+  "fx.2h":"Les billets de chantier arrivent au bureau le jour même.","fx.2":"Votre équipe prend une photo ou remplit un petit formulaire. Ça apparaît dans QuickBooks, sur le bon chantier.",
+  "fx.3h":"Des factures qui se font toutes seules.","fx.3":"Votre chargé de projet vérifie et approuve. La facture et les rappels partent à temps.",
+  "fx.more":"+ les applis que vous utilisez déjà",
+  "f.h2":"Vos questions, nos réponses.",
+  "f.1q":"Combien coûte la vérification?","f.1a":"On s'entend sur un prix avant de commencer. Vous payez seulement si on trouve 10 000 $ ou plus. Si on trouve moins, vous ne payez rien.",
+  "f.2q":"Devez-vous entrer dans nos systèmes?","f.2a":"Seulement pour regarder. On ne peut rien changer, envoyer ou effacer. Vous pouvez couper notre accès n'importe quand.",
+  "f.3q":"Et si le client a dit oui juste de vive voix?","f.3a":"On vous montre le travail qui a clairement été fait, mais jamais facturé. Votre chargé de projet confirme avec le client avant d'envoyer la facture.",
+  "f.4q":"Est-ce qu'on doit acheter autre chose après?","f.4a":"Non. La liste est à vous, peu importe. Si vous voulez que ça arrête, on vous montre le prix et en combien de temps ça se paie.",
+  "f.5q":"Parlez-vous français?","f.5a":"Oui. La vérification, la liste et les outils peuvent tous être en français ou en anglais.",
+  "ck.1":"10 000 $+ ou c'est gratuit","ck.2":"On fait juste regarder","ck.3":"La liste est à vous","ck.4":"Français et anglais",
+  "b.eyebrow":"Vérification gratuite","b.h2":"Trouvez l'argent qu'on vous doit déjà.","b.sub":"Parlez-nous un peu de votre entreprise. On va planifier un appel de 30 minutes.",
+  "b.1":"jours de chantiers vérifiés","b.2":"trouvés, sinon vous ne payez rien","b.3":"changement pour votre équipe",
+  "fm.name":"Votre nom","fm.email":"Courriel du travail","fm.company":"Entreprise","fm.companyph":"Nom de l'entreprise","fm.type":"Qu'est-ce que vous construisez?",
+  "fm.t1":"Gros bâtiments et commerces","fm.t2":"Maisons et rénos","fm.t3":"Un seul métier (électricité, plomberie…)","fm.t4":"Autre",
+  "fm.rev":"Combien facturez-vous par mois?","fm.r1":"Moins de 250 000 $","fm.r4":"Plus de 2 M$",
+  "fm.tools":"Quelles applis utilisez-vous pour les chantiers et l'argent?","fm.toolsph":"Exemple : QuickBooks et Excel",
+  "fm.submit":"Trouver mon argent perdu","fm.fine":"On vous répond en moins d'une journée.","ft.home":"← Retour à l'accueil"
+};
+</script>
+<script src="site.js"></script>
+<script>Site.init();</script>
+</body>
+</html>
