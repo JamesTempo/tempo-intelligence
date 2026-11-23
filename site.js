@@ -1,7 +1,7 @@
 // ===== Settings: change this =====
 const CONTACT_EMAIL = "hello@yourdomain.com"; // where audit requests go
 
-// Shared behaviour for every Tempo Intelligence page.
+// Shared behaviour for every Tempo Labs page.
 // Each page sets window.FR = {...} (French text) before loading this file,
 // and can set Site.update = fn to re-render numbers when the language changes.
 const Site = {
