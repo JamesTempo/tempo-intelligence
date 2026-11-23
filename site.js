@@ -47,7 +47,7 @@ const Site = {
     e.preventDefault();
     const d = new FormData(form);
     const body = [...d.entries()].map(([k, v]) => `${k}: ${v}`).join("\n");
-    const subj = Site.t("Free audit — ", "Audit gratuit — ") + (d.get("company") || "");
+    const subj = Site.t("Free call: ", "Appel gratuit : ") + (d.get("company") || "");
     location.href = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(subj)}&body=${encodeURIComponent(body)}`;
   });
 
