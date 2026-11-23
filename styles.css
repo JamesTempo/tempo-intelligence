@@ -119,18 +119,20 @@ nav .wrap{display:flex;align-items:center;justify-content:space-between;height:6
 .case li{font-size:15px;color:var(--muted);padding:9px 0;border-bottom:1px solid var(--line)}
 .case .slot{margin-top:auto;border:1.5px dashed #d2d2d7;border-radius:14px;padding:16px;text-align:center;font-size:14px;color:var(--soft)}
 
-/* faq */
-.faq{max-width:760px;margin:48px auto 0;text-align:left}
-details{border-bottom:1px solid var(--line);padding:22px 4px}
-details:first-child{border-top:1px solid var(--line)}
-summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:20px;font-size:17px;font-weight:600}
-summary::-webkit-details-marker{display:none}
-summary::after{content:"+";color:var(--soft);font-weight:400;font-size:22px;line-height:1}
-details[open] summary::after{content:"−"}
-details p{color:var(--muted);margin-top:10px;font-size:15.5px;max-width:680px}
-.checks{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:40px}
-.checks span{font-size:13.5px;color:var(--ink-2);background:#fff;border:1px solid var(--line);border-radius:999px;padding:8px 14px}
-.checks span::before{content:"✓";color:var(--blue);font-weight:700;margin-right:7px}
+/* calculator (worked example card) */
+[hidden]{display:none!important}
+.calc .roi{font-size:clamp(40px,11vw,60px);overflow-wrap:anywhere}
+.calc-asm{display:flex;flex-wrap:wrap;gap:8px;font-size:13px;color:var(--ink-2);margin-bottom:26px}
+.calc-asm > span{background:var(--band);padding:5px 10px;border-radius:8px}
+.calc-asm b{font-weight:600}
+.calc-in{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:26px}
+.calc-in label{font-size:13px;font-weight:500;color:var(--ink-2);display:grid;gap:6px;align-content:end}
+.calc-in input{font:inherit;font-size:16px;padding:12px 14px;border:1px solid #d2d2d7;border-radius:12px;background:#fff;color:var(--ink);width:100%}
+.calc-in input:focus{outline:3px solid var(--blue-soft);border-color:var(--blue)}
+@media(max-width:520px){.calc-in{grid-template-columns:1fr}}
+.calc-actions{display:flex;align-items:center;flex-wrap:wrap;gap:12px 20px;margin-top:24px}
+.calc-reset{background:none;border:0;font:inherit;font-size:14px;font-weight:500;color:var(--blue);cursor:pointer;padding:0;text-decoration:underline;text-underline-offset:3px}
+.calc-src{margin-top:16px;font-size:12.5px;color:var(--soft)}
 
 /* final */
 .final{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}

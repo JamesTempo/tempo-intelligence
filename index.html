@@ -22,7 +22,6 @@
       <div class="nav-links">
         <a href="#how" data-i18n="nav.how">Dispatch Command Center</a>
         <a href="#cases" data-i18n="nav.cases">Examples</a>
-        <a href="#faq">FAQ</a>
       </div>
       <div class="lang" role="group" aria-label="Language"><button data-lang="en" class="on">EN</button><i></i><button data-lang="fr">FR</button></div>
       <a href="#book" class="btn btn-sm" data-i18n="nav.cta">Free call</a>
@@ -70,9 +69,9 @@
         <path class="ecg-beat" pathLength="1000" vector-effect="non-scaling-stroke" d="M0 20 H70 L78 16 L84 20 L90 20 L96 3 L104 37 L111 12 L116 20 H270 L278 16 L284 20 L290 20 L296 3 L304 37 L311 12 L316 20 H470 L478 16 L484 20 L490 20 L496 3 L504 37 L511 12 L516 20 H600"/>
       </svg>
       <div class="step"><div class="dot">1</div><span class="k" data-i18n="how.1k">30 minutes · Free</span><h3 data-i18n="how.1h">Free call</h3><p data-i18n="how.1">We look at how calls, quotes and bookings move through your office today.</p></div>
-      <div class="step"><div class="dot">2</div><span class="k" data-i18n="how.2k">$2,000</span><h3 data-i18n="how.2h">Audit</h3><p data-i18n="how.2">We map where jobs leak and show you what it costs you.</p></div>
-      <div class="step"><div class="dot">3</div><span class="k" data-i18n="how.3k">$4,500 · Live in 21 days</span><h3 data-i18n="how.3h">Build</h3><p data-i18n="how.3">Every missed call gets a text back in seconds, every open quote is followed up until yes or no, and jobs land in your calendar. If it isn't live within 21 days of us getting access to your phone line, email, calendar and open-quote list, we waive the rest of the build balance.</p></div>
-      <div class="step"><div class="dot">4</div><span class="k" data-i18n="how.4k">$3,000 a year</span><h3 data-i18n="how.4h">Maintenance</h3><p data-i18n="how.4">We keep it running and send you a weekly recovered-revenue report.</p></div>
+      <div class="step"><div class="dot">2</div><span class="k" data-i18n="how.2k">Diagnosis</span><h3 data-i18n="how.2h">Audit</h3><p data-i18n="how.2">We map where jobs leak and show you what it costs you.</p></div>
+      <div class="step"><div class="dot">3</div><span class="k" data-i18n="how.3k">Setup</span><h3 data-i18n="how.3h">Build</h3><p data-i18n="how.3">Every missed call gets a text back in minutes, every open quote is followed up on, and jobs land directly in your calendar.</p></div>
+      <div class="step"><div class="dot">4</div><span class="k" data-i18n="how.4k">Ongoing</span><h3 data-i18n="how.4h">Maintenance</h3><p data-i18n="how.4">We keep it running and send you a weekly recovered-revenue report.</p></div>
     </div>
   </div>
 </section>
@@ -82,35 +81,33 @@
     <span class="eyebrow" data-i18n="cs.eyebrow">Examples</span>
     <h2 data-i18n="cs.h2">What one fix can do.</h2>
     <div class="cards" style="grid-template-columns:minmax(0,560px);justify-content:center">
-      <article class="card case reveal">
-        <span class="pill" data-i18n="cs.ex">Worked example, not a client result</span>
-        <div class="roi"><span data-i18n="cs.v">$45,000</span><small data-i18n="cs.yr">a year</small></div>
-        <h3 data-i18n="cs.1h">A plumbing and heating shop taking 40 calls a week.</h3>
-        <div class="kpis" style="grid-template-columns:1fr 1fr">
-          <div><b data-i18n="cs.k1v">2,080</b><span data-i18n="cs.k1">calls a year (40 a week)</span></div>
-          <div><b>562</b><span data-i18n="cs.k2">missed calls (27% unanswered)</span></div>
-          <div><b>112</b><span data-i18n="cs.k3">jobs, if 1 in 5 would have booked</span></div>
-          <div><b data-i18n="cs.k4v">$400</b><span data-i18n="cs.k4">a job, about $45,000 a year</span></div>
+      <article class="card case calc reveal" id="calc">
+        <span class="pill"><span data-i18n="cs.ex">Worked example, not a client result</span><span data-i18n="cs.mine" hidden>Your numbers</span></span>
+        <div class="roi" aria-live="polite"><span id="c-total">$45,000</span><small data-i18n="cs.yr">a year</small></div>
+        <h3><span data-i18n="cs.1h">A plumbing and heating shop taking 40 calls a week.</span><span data-i18n="cs.1hm" hidden>What missed calls could be costing your shop.</span></h3>
+        <p class="calc-asm" id="c-asm">
+          <span><b data-c="calls">40</b> <span data-i18n="cs.a1">calls a week</span></span>
+          <span><b data-c="miss">27%</b> <span data-i18n="cs.a2">unanswered</span></span>
+          <span><b data-c="book">20%</b> <span data-i18n="cs.a3">of missed callers would book</span></span>
+          <span><b data-c="job">$400</b> <span data-i18n="cs.a4">average job</span></span>
+        </p>
+        <div class="calc-in" id="c-panel" hidden>
+          <label><span data-i18n="cs.i1">Calls per week</span><input id="c-calls" type="number" inputmode="numeric" min="0" step="1" value="40"></label>
+          <label><span data-i18n="cs.i2">% of calls unanswered</span><input id="c-miss" type="number" inputmode="decimal" min="0" max="100" step="1" value="27"></label>
+          <label><span data-i18n="cs.i3">% of missed callers who would book</span><input id="c-book" type="number" inputmode="decimal" min="0" max="100" step="1" value="20"></label>
+          <label><span data-i18n="cs.i4">Average job value ($)</span><input id="c-job" type="number" inputmode="numeric" min="0" step="10" value="400"></label>
         </div>
+        <div class="kpis">
+          <div><b id="c-yr">2,080</b><span data-i18n="cs.k1">calls a year</span></div>
+          <div><b id="c-missed">562</b><span data-i18n="cs.k2">missed calls a year</span></div>
+          <div><b id="c-jobs">112</b><span data-i18n="cs.k3">jobs lost a year</span></div>
+        </div>
+        <div class="calc-actions">
+          <button type="button" class="btn btn-line btn-sm" id="c-toggle" aria-expanded="false" aria-controls="c-panel"><span data-i18n="cs.try">Try your own numbers</span><span data-i18n="cs.hide" hidden>Hide the inputs</span></button>
+          <button type="button" class="calc-reset" id="c-reset" data-i18n="cs.reset" hidden>Reset to example</button>
+        </div>
+        <p class="calc-src" data-i18n="cs.src">Source for 27% unanswered: Invoca, 2024.</p>
       </article>
-    </div>
-  </div>
-</section>
-
-<section class="center" id="faq">
-  <div class="wrap">
-    <span class="eyebrow">FAQ</span>
-    <h2 data-i18n="f.h2">Questions, answered.</h2>
-    <div class="faq">
-      <details open><summary data-i18n="f.1q">What happens on the free call?</summary><p data-i18n="f.1a">We talk for 30 minutes. We find the task that costs you the most. We tell you if fixing it is worth the money. You don't have to buy anything.</p></details>
-      <details><summary data-i18n="f.2q">What if it's not worth it?</summary><p data-i18n="f.2a">Then we tell you. You still keep what we found. We only suggest fixes that pay for themselves in the first year.</p></details>
-      <details><summary data-i18n="f.3q">How much does it cost?</summary><p data-i18n="f.3a">The audit is $2,000. Most builds are $4,500 and maintenance is $3,000 a year. You'll know the price before we start.</p></details>
-      <details><summary data-i18n="f.6q">What if it isn't live in 21 days?</summary><p data-i18n="f.6a">We waive the rest of the build balance, as long as you gave us access to your phone line, email, calendar and open-quote list on time and the scope didn't change.</p></details>
-      <details><summary data-i18n="f.4q">Do you speak French?</summary><p data-i18n="f.4a">Yes. We can do everything in English or French.</p></details>
-      <details><summary data-i18n="f.5q">What kinds of businesses do you help?</summary><p data-i18n="f.5a">Any service business that runs on calls and quotes. We started with Quebec plumbing and heating contractors.</p></details>
-    </div>
-    <div class="checks">
-      <span data-i18n="ck.1">Free 30-minute call</span><span data-i18n="ck.3">Not worth it? We'll tell you</span><span data-i18n="ck.4">English &amp; French</span>
     </div>
   </div>
 </section>
@@ -120,7 +117,7 @@
     <div>
       <span class="eyebrow" data-i18n="b.eyebrow">Free call</span>
       <h2 data-i18n="b.h2">Find where you're losing money.</h2>
-      <p class="sub" data-i18n="b.sub">Tell us how your shop handles calls and quotes. We'll come to the call with a price tag.</p>
+      <p class="sub" data-i18n="b.sub">Tell us how your shop handles calls and quotes. We'll come to the call with numbers for your shop.</p>
       <ul class="facts">
         <li><b>30</b><span data-i18n="b.1">minutes, free</span></li>
         <li><b>1</b><span data-i18n="b.2">day to hear back from us</span></li>
@@ -177,22 +174,18 @@ window.FR = {
   "why.3h":"Régler la plus grosse d'abord.","why.3":"On commence par ce qui fait sauver le plus d'argent. Si ça ne vaut pas la peine, on vous le dit.",
   "how.eyebrow":"Comment ça marche","how.h2":"Notre centre de commande.","how.sub":"Un seul système pour votre bureau, qui suit chaque appel, chaque soumission et chaque réservation jusqu'à ce que le dossier soit fermé.",
   "how.1k":"30 minutes · Gratuit","how.1h":"Appel gratuit","how.1":"On regarde comment les appels, les soumissions et les réservations circulent dans votre bureau aujourd'hui.",
-  "how.2k":"2 000 $","how.2h":"Audit","how.2":"On trouve où les jobs vous glissent entre les doigts et on vous montre combien ça vous coûte.",
-  "how.3k":"4 500 $ · En place en 21 jours","how.3h":"Mise en place","how.3":"Chaque appel manqué reçoit un texto en quelques secondes, chaque soumission ouverte est relancée jusqu'à un oui ou un non, et les jobs arrivent dans votre calendrier. Si ce n'est pas en place dans les 21 jours après qu'on a reçu l'accès à votre ligne téléphonique, votre courriel, votre calendrier et votre liste de soumissions ouvertes, on annule le reste du solde de la mise en place.",
-  "how.4k":"3 000 $ par année","how.4h":"Entretien","how.4":"On s'assure que tout roule et on vous envoie chaque semaine un rapport des revenus récupérés.",
+  "how.2k":"Diagnostic","how.2h":"Audit","how.2":"On trouve où les jobs vous glissent entre les doigts et on vous montre combien ça vous coûte.",
+  "how.3k":"Installation","how.3h":"Mise en place","how.3":"Chaque appel manqué reçoit un texto en quelques minutes, chaque soumission ouverte est relancée, et les jobs arrivent directement dans votre calendrier.",
+  "how.4k":"En continu","how.4h":"Entretien","how.4":"On s'assure que tout roule et on vous envoie chaque semaine un rapport des revenus récupérés.",
   "cs.eyebrow":"Exemples","cs.h2":"Ce qu'une seule solution peut faire.","cs.ex":"Exemple calculé, pas un résultat client",
-  "cs.v":"45 000 $","cs.yr":"par année","cs.1h":"Une entreprise de plomberie et chauffage qui reçoit 40 appels par semaine.",
-  "cs.k1v":"2 080","cs.k1":"appels par année (40 par semaine)","cs.k2":"appels manqués (27 % sans réponse)",
-  "cs.k3":"jobs, si 1 appelant sur 5 avait réservé","cs.k4v":"400 $","cs.k4":"par job, environ 45 000 $ par année",
-  "f.h2":"Vos questions, nos réponses.",
-  "f.1q":"Qu'est-ce qui se passe pendant l'appel gratuit?","f.1a":"On parle pendant 30 minutes. On trouve la tâche qui vous coûte le plus. On vous dit si ça vaut la peine de la régler. Vous n'avez rien à acheter.",
-  "f.2q":"Et si ça ne vaut pas la peine?","f.2a":"On vous le dit. Vous gardez quand même ce qu'on a trouvé. On propose seulement des solutions qui se paient dans la première année.",
-  "f.3q":"Combien ça coûte?","f.3a":"L'audit coûte 2 000 $. La plupart des mises en place coûtent 4 500 $ et l'entretien, 3 000 $ par année. Vous connaissez le prix avant qu'on commence.",
-  "f.6q":"Et si ce n'est pas en place en 21 jours?","f.6a":"On annule le reste du solde de la mise en place, à condition que vous nous ayez donné l'accès à votre ligne téléphonique, votre courriel, votre calendrier et votre liste de soumissions ouvertes à temps, et que la portée du projet n'ait pas changé.",
-  "f.4q":"Parlez-vous français?","f.4a":"Oui. On peut tout faire en français ou en anglais.",
-  "f.5q":"Quels genres d'entreprises aidez-vous?","f.5a":"Toute entreprise de service qui fonctionne avec des appels et des soumissions. On a commencé avec les entrepreneurs en plomberie et chauffage du Québec.",
-  "ck.1":"Appel gratuit de 30 minutes","ck.3":"Pas rentable? On vous le dit","ck.4":"Français et anglais",
-  "b.eyebrow":"Appel gratuit","b.h2":"Trouvez où vous perdez de l'argent.","b.sub":"Dites-nous comment vous gérez les appels et les soumissions. On arrivera à l'appel avec un prix.",
+  "cs.mine":"Vos chiffres","cs.yr":"par année","cs.1h":"Une entreprise de plomberie et chauffage qui reçoit 40 appels par semaine.",
+  "cs.1hm":"Ce que les appels manqués pourraient coûter à votre entreprise.",
+  "cs.a1":"appels par semaine","cs.a2":"sans réponse","cs.a3":"des appelants manqués auraient réservé","cs.a4":"par job en moyenne",
+  "cs.i1":"Appels par semaine","cs.i2":"% des appels sans réponse","cs.i3":"% des appelants manqués qui auraient réservé","cs.i4":"Valeur moyenne d'une job ($)",
+  "cs.k1":"appels par année","cs.k2":"appels manqués par année","cs.k3":"jobs perdues par année",
+  "cs.try":"Essayer avec vos chiffres","cs.hide":"Cacher les champs","cs.reset":"Revenir à l'exemple",
+  "cs.src":"Source pour les 27 % sans réponse : Invoca, 2024.",
+  "b.eyebrow":"Appel gratuit","b.h2":"Trouvez où vous perdez de l'argent.","b.sub":"Dites-nous comment vous gérez les appels et les soumissions. On arrivera à l'appel avec des chiffres pour votre entreprise.",
   "b.1":"minutes, gratuit","b.2":"jour pour avoir une réponse","b.3":"pression pour acheter",
   "fm.name":"Votre nom","fm.email":"Courriel du travail","fm.company":"Entreprise","fm.companyph":"Nom de l'entreprise","fm.ind":"Type d'entreprise",
   "fm.i0":"Plomberie ou chauffage","fm.i1":"Construction","fm.i2":"Gestion immobilière","fm.i3":"Réparation et service","fm.i4":"Bureau ou cabinet","fm.i5":"Autre",

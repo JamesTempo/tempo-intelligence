@@ -9,7 +9,7 @@ const Site = {
   update: null,
   money(n){
     return this.lang === "fr"
-      ? Math.round(n).toLocaleString("fr-CA") + " $"
+      ? Math.round(n).toLocaleString("fr-CA") + " $"
       : "$" + Math.round(n).toLocaleString("en-CA");
   },
   num(n, d = 0){ return n.toLocaleString(this.lang === "fr" ? "fr-CA" : "en-CA", {maximumFractionDigits: d}); },
@@ -56,6 +56,66 @@ const Site = {
   document.querySelectorAll(".reveal").forEach(el => io.observe(el));
 
   document.querySelectorAll(".yr").forEach(el => el.textContent = new Date().getFullYear());
+
+  // missed-call calculator (Examples section)
+  const calc = document.getElementById("calc");
+  if (calc){
+    const DEF = {calls: 40, miss: 27, book: 20, job: 400};
+    const $ = id => document.getElementById(id);
+    const inputs = {calls: $("c-calls"), miss: $("c-miss"), book: $("c-book"), job: $("c-job")};
+    const panel = $("c-panel"), toggle = $("c-toggle"), reset = $("c-reset"), asm = $("c-asm");
+    const swap = (el, showSecond) => { el.children[0].hidden = showSecond; el.children[1].hidden = !showSecond; };
+
+    const read = () => {
+      const v = {};
+      for (const k in inputs){
+        let n = parseFloat(String(inputs[k].value).replace(",", "."));
+        if (!isFinite(n) || n < 0) n = 0;
+        if (k === "miss" || k === "book") n = Math.min(n, 100);
+        v[k] = n;
+      }
+      return v;
+    };
+    // round dollars to a sensible precision
+    const roundMoney = n => n >= 10000 ? Math.round(n / 1000) * 1000 : n >= 1000 ? Math.round(n / 100) * 100 : Math.round(n / 10) * 10;
+    const pct = n => Site.num(n, 1) + Site.t("%", " %");
+
+    function render(){
+      const v = read();
+      const isDef = Object.keys(DEF).every(k => v[k] === DEF[k]);
+      const yr = Math.round(v.calls * 52);
+      const missed = Math.round(yr * v.miss / 100);
+      const jobs = Math.round(missed * v.book / 100);
+      $("c-yr").textContent = Site.num(yr);
+      $("c-missed").textContent = Site.num(missed);
+      $("c-jobs").textContent = Site.num(jobs);
+      $("c-total").textContent = Site.money(roundMoney(jobs * v.job));
+      calc.querySelector('[data-c="calls"]').textContent = Site.num(v.calls, 1);
+      calc.querySelector('[data-c="miss"]').textContent = pct(v.miss);
+      calc.querySelector('[data-c="book"]').textContent = pct(v.book);
+      calc.querySelector('[data-c="job"]').textContent = Site.money(v.job);
+      swap(calc.querySelector(".pill"), !isDef);
+      swap(calc.querySelector("h3"), !isDef);
+      reset.hidden = isDef;
+    }
+
+    function setOpen(open){
+      panel.hidden = !open;
+      asm.hidden = open;
+      toggle.setAttribute("aria-expanded", String(open));
+      swap(toggle, open);
+      if (open) inputs.calls.focus();
+    }
+
+    toggle.addEventListener("click", () => setOpen(panel.hidden));
+    reset.addEventListener("click", () => { for (const k in DEF) inputs[k].value = DEF[k]; render(); });
+    for (const k in inputs) inputs[k].addEventListener("input", render);
+
+    const prev = Site.update;
+    Site.update = () => { if (prev) prev(); render(); };
+    for (const k in DEF) inputs[k].value = DEF[k]; // ignore values the browser restores on reload
+    render();
+  }
 
   Site.init = () => {
     let saved = null; try { saved = localStorage.getItem("tempo-lang"); } catch(e){}
