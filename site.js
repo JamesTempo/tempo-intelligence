@@ -1,5 +1,5 @@
 // ===== Settings: change this =====
-const CONTACT_EMAIL = "hello@yourdomain.com"; // where audit requests go
+const CONTACT_EMAIL = "hello@yourdomain.com"; // where assessment requests go
 
 // Shared behaviour for every Tempo Labs page.
 // Each page sets window.FR = {...} (French text) before loading this file,
@@ -47,7 +47,7 @@ const Site = {
     e.preventDefault();
     const d = new FormData(form);
     const body = [...d.entries()].map(([k, v]) => `${k}: ${v}`).join("\n");
-    const subj = Site.t("Free audit — ", "Audit gratuit — ") + (d.get("company") || "");
+    const subj = Site.t("Free assessment — ", "Évaluation gratuite — ") + (d.get("company") || "");
     location.href = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(subj)}&body=${encodeURIComponent(body)}`;
   });
 
@@ -59,7 +59,6 @@ const Site = {
 
   Site.init = () => {
     let saved = null; try { saved = localStorage.getItem("tempo-lang"); } catch(e){}
-    const browserFR = (navigator.language || "").toLowerCase().startsWith("fr");
-    setLang(saved || (browserFR ? "fr" : "en"));
+    setLang(saved || "fr");
   };
 })();
