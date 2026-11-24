@@ -123,9 +123,6 @@
         <h4 data-i18n="calc.g1">Calls</h4>
         <div class="sl"><label for="c-calls"><span data-i18n="calc.calls">Calls you get each week</span><output id="o-calls"></output></label><input type="range" id="c-calls" min="10" max="150" step="5" value="40"></div>
         <div class="sl"><label for="c-miss"><span data-i18n="calc.miss">Calls nobody answers</span><output id="o-miss"></output></label><input type="range" id="c-miss" min="5" max="60" value="27"></div>
-        <div class="sl"><label for="c-need"><span data-i18n="calc.need">Missed callers who needed a job done</span><output id="o-need"></output></label><input type="range" id="c-need" min="5" max="50" value="20"></div>
-        <div class="sl"><label for="c-reach"><span data-i18n="calc.reach">Of those, how many we reach in time</span><output id="o-reach"></output></label><input type="range" id="c-reach" min="20" max="90" step="5" value="60"></div>
-        <div class="sl"><label for="c-book"><span data-i18n="calc.book">Of those reached, how many still book</span><output id="o-book"></output></label><input type="range" id="c-book" min="10" max="90" step="5" value="50"></div>
         <div class="sl"><label for="c-job"><span data-i18n="calc.job">Average job value</span><output id="o-job"></output></label><input type="range" id="c-job" min="150" max="2000" step="25" value="400"></div>
         <h4 data-i18n="calc.g2">Quotes</h4>
         <div class="sl"><label for="c-q"><span data-i18n="calc.q">Open quotes each month</span><output id="o-q"></output></label><input type="range" id="c-q" min="0" max="60" value="10"></div>
@@ -138,6 +135,7 @@
         <div class="row-out"><span data-i18n="calc.r2">Jobs you could win back from calls</span><b id="r-calls"></b></div>
         <div class="row-out"><span data-i18n="calc.r3">Extra quotes won with follow-up</span><b id="r-quotes"></b></div>
         <div class="row-out big"><span data-i18n="calc.r4">Realistic win-back each year</span><b id="r-total"></b></div>
+        <p class="calc-note" data-i18n="calc.asm">We assume 1 in 5 missed callers needed a job, we reach 6 in 10 of them in time, and half of those still book.</p>
         <p class="calc-note" data-i18n="calc.note">This is an estimate, not a promise. In the audit, we check it against your real calls and quotes.</p>
         <a href="#book" class="btn" data-i18n="calc.cta">Check my real number</a>
       </div>
@@ -165,7 +163,7 @@
 <section class="band center" id="audit">
   <div class="wrap">
     <span class="eyebrow" data-i18n="g.eyebrow">No-risk start</span>
-    <h2 data-i18n-html="g.h2">Two promises. <span class="dim">Both in writing.</span></h2>
+    <h2 data-i18n-html="g.h2">One promise. <span class="dim">In writing.</span></h2>
 
     <div class="guarantee reveal">
       <div class="seal"><span data-i18n="g.sealn">$10K</span><small data-i18n="g.seal">or it's free</small></div>
@@ -178,15 +176,6 @@
           <li data-i18n-html="g.t3"><b>Clear limit.</b> It covers the audit fee. It's not a promise of new sales.</li>
           <li data-i18n-html="g.t4"><b>Time saved is separate.</b> Office hours saved are shown on their own and don't count toward the $10,000.</li>
         </ul>
-      </div>
-    </div>
-
-    <div class="g2 reveal">
-      <div class="seal-sm">21<small data-i18n="g.seal2">days</small></div>
-      <div>
-        <h3 data-i18n="g.2h">Live in 21 days, or you don't pay the rest.</h3>
-        <p data-i18n="g.2">Your system is running within 21 days of getting access to your phone line, calendar, email and quote list. If not, we drop the rest of the build bill. If you already paid in full, we refund that part.</p>
-        <p class="fine" data-i18n="g.2s">"Live" means missed-call texts, quote follow-ups and your weekly report are all running. Doesn't apply if access comes late or the job changes.</p>
       </div>
     </div>
   </div>
@@ -213,7 +202,6 @@
         <ul>
           <li data-i18n="fit.n1">You get only a few calls a week</li>
           <li data-i18n="fit.n2">Someone already answers every call fast</li>
-          <li data-i18n="fit.n3">You want a full custom software build</li>
         </ul>
       </div>
     </div>
@@ -225,11 +213,9 @@
     <span class="eyebrow">FAQ</span>
     <h2 data-i18n="faq.h2">Good questions.</h2>
     <div class="faq">
-      <details><summary data-i18n="q1">Do you have results yet?</summary><p data-i18n="a1">We're running our first pilot shops now. Before we turn anything on, we measure your numbers. That way you see exactly what changed, with real data.</p></details>
       <details><summary data-i18n="q2">What happens with emergencies?</summary><p data-i18n="a2">Urgent calls, like a burst pipe or no heat, go straight to a real person on your team. The system never handles an emergency on its own.</p></details>
       <details><summary data-i18n="q3">What if a customer writes back?</summary><p data-i18n="a3">Your team gets told right away, with the full message. You decide how to answer.</p></details>
-      <details><summary data-i18n="q4">What counts toward the $10,000?</summary><p data-i18n="a4">Jobs you're likely losing from missed calls and open quotes, based on your real call logs and quote list. You see each number and how we got it. Time saved is shown on its own.</p></details>
-      <details><summary data-i18n="q5">Does it work with my software?</summary><p data-i18n="a5">We work with the phone line, calendar and booking tool you already use. We check this on the free call before you pay anything.</p></details>
+      <details><summary data-i18n="q5">Does it work with my software?</summary><p data-i18n="a5">We work with the phone line, calendar and booking tool you already use. We check this on the free call before you pay anything. We also offer custom builds.</p></details>
       <details><summary data-i18n="q6">Is it legal to text my customers?</summary><p data-i18n="a6">Yes, when it's done right. Every message follows Canada's anti-spam law: it says who it's from and how to stop. All texts are in French first.</p></details>
     </div>
     <div class="checks">
@@ -298,34 +284,30 @@ window.FR = {
   "rp.h":"Rapport de la semaine","rp.tag":"Exemple seulement","rp.1":"Appels manqués","rp.2":"Textos envoyés","rp.3":"Ont répondu","rp.4":"Envoyés à votre équipe (urgent)","rp.5":"Soumissions relancées","rp.6":"Nouvelles jobs au calendrier","rp.cap":"Voici ce que vous verriez chaque lundi. Pas un vrai client.",
   "calc.eyebrow":"Vos chiffres","calc.h2":"Combien vous coûtent les appels manqués?",
   "calc.sub":"Bougez les curseurs selon votre entreprise. On vous montre deux choses : ce qui est en jeu, et ce que vous pourriez vraiment récupérer.",
-  "calc.g1":"Appels","calc.calls":"Appels reçus par semaine","calc.miss":"Appels sans réponse","calc.need":"Clients manqués qui avaient besoin d'une job","calc.reach":"De ceux-là, combien on rejoint à temps","calc.book":"De ceux rejoints, combien réservent quand même","calc.job":"Valeur moyenne d'une job",
+  "calc.g1":"Appels","calc.calls":"Appels reçus par semaine","calc.miss":"Appels sans réponse","calc.job":"Valeur moyenne d'une job",
   "calc.g2":"Soumissions","calc.q":"Soumissions ouvertes par mois","calc.qv":"Valeur moyenne d'une soumission","calc.qw":"Soumissions de plus gagnées avec le suivi",
   "calc.r1":"Jobs en jeu à cause des appels manqués, par an","calc.r1s":"Pas de l'argent récupéré. Juste ce qui est sur la table.",
   "calc.r2":"Jobs récupérables grâce aux appels","calc.r3":"Soumissions de plus gagnées avec le suivi","calc.r4":"Récupération réaliste par année",
+  "calc.asm":"On suppose que 1 client manqué sur 5 avait besoin d'une job, qu'on en rejoint 6 sur 10 à temps, et que la moitié réserve quand même.",
   "calc.note":"C'est une estimation, pas une promesse. Pendant l'audit, on la vérifie avec vos vrais appels et vos vraies soumissions.","calc.cta":"Vérifier mon vrai chiffre",
   "how.eyebrow":"La méthode Tempo","how.h2":"Quatre étapes. Une prochaine étape claire à chaque fois.",
   "how.1k":"30 minutes · Gratuit","how.1h":"Évaluation gratuite","how.1":"On regarde vos appels et vos soumissions ensemble. Vous savez si ça vaut la peine. Si ce n'est pas le cas, on vous le dit.",
   "how.2k":"Environ 1 semaine","how.2h":"Audit des jobs perdues","how.2":"On utilise vos vraies données pour trouver les jobs que vous perdez. Le plan est à vous, même si vous arrêtez là.",
   "how.3k":"En marche en 21 jours","how.3h":"On l'installe","how.3":"On met en place votre Centre de répartition. Le prix de l'audit est déduit du prix.",
   "how.4k":"Chaque mois","how.4h":"On surveille et on améliore","how.4":"On le vérifie chaque semaine, on répare ce qui brise et on vous envoie un rapport des jobs réservées.",
-  "g.eyebrow":"Commencer sans risque","g.h2":"Deux promesses. <span class=\"dim\">Les deux par écrit.</span>","g.sealn":"10 k$","g.seal":"ou c'est gratuit",
+  "g.eyebrow":"Commencer sans risque","g.h2":"Une promesse. <span class=\"dim\">Par écrit.</span>","g.sealn":"10 k$","g.seal":"ou c'est gratuit",
   "g.1h":"Si on ne trouve pas 10 000 $, votre audit est gratuit.","g.1":"Si on ne trouve pas au moins 10 000 $ par année en occasions de jobs documentées, vous ne payez pas l'audit.",
   "g.t1":"<b>Documenté.</b> On utilise vos vrais appels manqués et vos vraies soumissions ouvertes, pas des suppositions.",
   "g.t2":"<b>Montré à vous.</b> Vous voyez chaque chiffre et comment on l'a trouvé. On s'entend sur le calcul avant de commencer.",
   "g.t3":"<b>Limite claire.</b> Ça couvre le prix de l'audit. Ce n'est pas une promesse de ventes.",
   "g.t4":"<b>Le temps sauvé est à part.</b> Les heures de bureau sauvées sont montrées à part et ne comptent pas dans les 10 000 $.",
-  "g.seal2":"jours","g.2h":"En marche en 21 jours, sinon vous ne payez pas le reste.",
-  "g.2":"Votre système roule dans les 21 jours après qu'on a accès à votre ligne téléphonique, votre calendrier, votre courriel et votre liste de soumissions. Sinon, on annule le reste de la facture. Si vous avez déjà tout payé, on vous rembourse cette partie.",
-  "g.2s":"« En marche » veut dire que les textos après un appel manqué, les relances de soumissions et le rapport de la semaine fonctionnent tous. Ne s'applique pas si les accès arrivent en retard ou si le projet change.",
   "fit.eyebrow":"Est-ce pour vous?","fit.h2":"Fait pour les entreprises occupées.","fit.sub":"Si ça ne sera pas payant pour vous, on vous le dit dès le premier appel.",
   "fit.yh":"Un bon fit","fit.y1":"Entreprise de plomberie ou de chauffage au Québec","fit.y2":"Environ 5 à 30 personnes","fit.y3":"30 appels ou plus par semaine","fit.y4":"Des appels sont manqués et des soumissions restent sans réponse","fit.y5":"Le propriétaire ou le directeur est à l'appel",
-  "fit.nh":"Pas un fit (pour l'instant)","fit.n1":"Vous recevez seulement quelques appels par semaine","fit.n2":"Quelqu'un répond déjà vite à chaque appel","fit.n3":"Vous voulez un logiciel 100 % sur mesure",
+  "fit.nh":"Pas un fit (pour l'instant)","fit.n1":"Vous recevez seulement quelques appels par semaine","fit.n2":"Quelqu'un répond déjà vite à chaque appel",
   "faq.h2":"Bonnes questions.",
-  "q1":"Avez-vous déjà des résultats?","a1":"On travaille avec nos premières entreprises pilotes en ce moment. Avant de partir quoi que ce soit, on mesure vos chiffres. Comme ça, vous voyez exactement ce qui a changé, avec de vraies données.",
   "q2":"Qu'est-ce qui arrive avec les urgences?","a2":"Les appels urgents, comme un tuyau qui a éclaté ou une panne de chauffage, vont direct à une vraie personne de votre équipe. Le système ne gère jamais une urgence tout seul.",
   "q3":"Et si un client répond au texto?","a3":"Votre équipe est avertie tout de suite, avec le message au complet. C'est vous qui décidez quoi répondre.",
-  "q4":"Qu'est-ce qui compte dans les 10 000 $?","a4":"Les jobs que vous perdez probablement à cause des appels manqués et des soumissions ouvertes, selon votre vrai registre d'appels et votre liste de soumissions. Vous voyez chaque chiffre et comment on l'a trouvé. Le temps sauvé est montré à part.",
-  "q5":"Est-ce que ça marche avec mon logiciel?","a5":"On travaille avec la ligne téléphonique, le calendrier et l'outil de rendez-vous que vous avez déjà. On le vérifie pendant l'appel gratuit, avant que vous payiez quoi que ce soit.",
+  "q5":"Est-ce que ça marche avec mon logiciel?","a5":"On travaille avec la ligne téléphonique, le calendrier et l'outil de rendez-vous que vous avez déjà. On le vérifie pendant l'appel gratuit, avant que vous payiez quoi que ce soit. On offre aussi des solutions sur mesure.",
   "q6":"Est-ce légal d'envoyer des textos à mes clients?","a6":"Oui, quand c'est bien fait. Chaque message respecte la loi canadienne anti-pourriel : il dit de qui il vient et comment arrêter. Tous les textos sont d'abord en français.",
   "ck.1":"Évaluation gratuite de 30 minutes","ck.2":"Pas rentable? On vous le dit","ck.3":"En français d'abord, en anglais aussi",
   "bk.eyebrow":"Prochaine étape","bk.h2":"Réservez votre évaluation gratuite.","bk.sub":"30 minutes, au téléphone ou en vidéo. Aucune pression.",
@@ -338,14 +320,15 @@ window.FR = {
 <script>
 (() => {
   const $ = id => document.getElementById(id);
-  const ids = ["calls","miss","need","reach","book","job","q","qv","qw"];
-  const pct = ["miss","need","reach","book","qw"], money = ["job","qv"];
+  const ids = ["calls","miss","job","q","qv","qw"];
+  const pct = ["miss","qw"], money = ["job","qv"];
+  const NEED = 0.2, REACH = 0.6, BOOK = 0.5;
   function render(){
     const v = {}; ids.forEach(k => v[k] = +$("c-" + k).value);
     ids.forEach(k => $("o-" + k).textContent = pct.includes(k) ? v[k] + (Site.lang === "fr" ? " %" : "%") :money.includes(k) ? Site.money(v[k]) : Site.num(v[k]));
     const missedYear = v.calls * 52 * v.miss / 100;
-    const stake = missedYear * v.need / 100 * v.job;
-    const fromCalls = stake * v.reach / 100 * v.book / 100;
+    const stake = missedYear * NEED * v.job;
+    const fromCalls = stake * REACH * BOOK;
     const fromQuotes = v.q * 12 * v.qv * v.qw / 100;
     $("r-stake").textContent = Site.money(stake);
     $("r-calls").textContent = Site.money(fromCalls);
