@@ -1,6 +1,5 @@
 // ===== Settings: change this =====
-// TEMPORARY: replace with your real Calendly link
-const CALENDLY_URL = "https://calendly.com/tempo-labs-placeholder/30min";
+const BOOKING_URL = "https://cal.com/james-elalouf-jhoqaf/discovery";
 
 // Shared behaviour for every Tempo Labs page.
 // Each page sets window.FR = {...} (French text) before loading this file,
@@ -42,7 +41,7 @@ const Site = {
   }
   document.querySelectorAll(".lang button").forEach(b => b.addEventListener("click", () => setLang(b.dataset.lang)));
 
-  document.querySelectorAll("[data-calendly]").forEach(a => a.href = CALENDLY_URL);
+  document.querySelectorAll("[data-calendly]").forEach(a => a.href = BOOKING_URL);
 
   // reveal on scroll
   const io = new IntersectionObserver(es => es.forEach(x => { if (x.isIntersecting){ x.target.classList.add("in"); io.unobserve(x.target); } }), {threshold: .1});
