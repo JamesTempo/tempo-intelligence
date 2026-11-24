@@ -253,27 +253,13 @@
         <li><b>3</b><span data-i18n="bk.3">A straight answer: worth fixing, or not</span></li>
       </ul>
     </div>
-    <form id="form">
-      <div class="two">
-        <label><span data-i18n="f.name">Your name</span><input name="name" required autocomplete="name"></label>
-        <label><span data-i18n="f.company">Company</span><input name="company" required autocomplete="organization"></label>
-      </div>
-      <div class="two">
-        <label><span data-i18n="f.email">Email</span><input name="email" type="email" required autocomplete="email"></label>
-        <label><span data-i18n="f.phone">Phone</span><input name="phone" type="tel" autocomplete="tel"></label>
-      </div>
-      <div class="two">
-        <label><span data-i18n="f.calls">Calls each week</span>
-          <select name="calls_per_week"><option data-i18n="f.c1">Under 20</option><option>20–40</option><option>40–80</option><option>80+</option></select></label>
-        <label><span data-i18n="f.team">Team size</span>
-          <select name="team_size"><option>1–4</option><option selected>5–15</option><option>16–30</option><option>30+</option></select></label>
-      </div>
-      <label><span data-i18n="f.issue">Biggest problem</span>
-        <select name="problem"><option data-i18n="f.i1">Missed calls</option><option data-i18n="f.i2">Quotes that go quiet</option><option data-i18n="f.i3">Both</option></select></label>
-      <label><span data-i18n="f.apps">What do you use to book jobs?</span><input name="booking_tool" data-i18n-ph="f.appsph" placeholder="e.g. Google Calendar, Jobber, paper"></label>
-      <button class="btn" type="submit" data-i18n="f.btn">Book my free assessment</button>
-      <p class="fine" data-i18n="f.fine">We reply within one business day.</p>
-    </form>
+    <div class="book-card">
+      <svg class="book-ic" viewBox="0 0 24 24" width="40" height="40" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="3" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M3 10h18M8 3v4M16 3v4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><circle cx="12" cy="15.5" r="1.6" fill="currentColor"/></svg>
+      <h3 data-i18n="bk.ch">Pick a time that works for you</h3>
+      <p data-i18n="bk.cp">Choose a 30-minute slot on our calendar. You'll get a confirmation by email right away.</p>
+      <a class="btn" data-calendly target="_blank" rel="noopener" href="#" data-i18n="bk.cb">Choose a time</a>
+      <p class="fine" data-i18n="bk.cf">Opens our booking calendar in a new tab.</p>
+    </div>
   </div>
 </section>
 
@@ -343,10 +329,8 @@ window.FR = {
   "q6":"Est-ce légal d'envoyer des textos à mes clients?","a6":"Oui, quand c'est bien fait. Chaque message respecte la loi canadienne anti-pourriel : il dit de qui il vient et comment arrêter. Tous les textos sont d'abord en français.",
   "ck.1":"Évaluation gratuite de 30 minutes","ck.2":"Pas rentable? On vous le dit","ck.3":"En français d'abord, en anglais aussi",
   "bk.eyebrow":"Prochaine étape","bk.h2":"Réservez votre évaluation gratuite.","bk.sub":"30 minutes, au téléphone ou en vidéo. Aucune pression.",
-  "bk.lh":"Ce que vous allez savoir :","bk.1":"Environ combien de jobs vous perdez chaque mois à cause des appels manqués et des soumissions sans suivi","bk.2":"Si vous êtes admissible à la garantie d'audit de 10 000 $","bk.3":"Une réponse franche : ça vaut la peine, ou non",
-  "f.name":"Votre nom","f.company":"Entreprise","f.email":"Courriel","f.phone":"Téléphone","f.calls":"Appels par semaine","f.c1":"Moins de 20","f.team":"Taille de l'équipe",
-  "f.issue":"Plus gros problème","f.i1":"Appels manqués","f.i2":"Soumissions sans suivi","f.i3":"Les deux",
-  "f.apps":"Avec quoi prenez-vous vos rendez-vous?","f.appsph":"ex. Google Agenda, Jobber, papier","f.btn":"Réserver mon évaluation gratuite","f.fine":"On vous répond en un jour ouvrable.",
+  "bk.lh":"Ce que vous allez savoir :","bk.1":"Environ combien de jobs vous perdez chaque mois à cause des appels manqués et des soumissions sans suivi","bk.2":"Si vous êtes admissible à la garantie d'audit de 10 000 $","bk.3":"Une réponse franche : ça vaut la peine, ou non",
+  "bk.ch":"Choisissez le moment qui vous convient","bk.cp":"Réservez une plage de 30 minutes dans notre calendrier. Vous recevez une confirmation par courriel tout de suite.","bk.cb":"Choisir un moment","bk.cf":"Ouvre notre calendrier de réservation dans un nouvel onglet.",
   "ft.1":"Récupération de jobs pour les entrepreneurs en plomberie et chauffage du Québec"
 };
 </script>

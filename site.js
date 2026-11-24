@@ -1,5 +1,6 @@
 // ===== Settings: change this =====
-const CONTACT_EMAIL = "hello@yourdomain.com"; // where assessment requests go
+// TEMPORARY: replace with your real Calendly link
+const CALENDLY_URL = "https://calendly.com/tempo-labs-placeholder/30min";
 
 // Shared behaviour for every Tempo Labs page.
 // Each page sets window.FR = {...} (French text) before loading this file,
@@ -41,15 +42,7 @@ const Site = {
   }
   document.querySelectorAll(".lang button").forEach(b => b.addEventListener("click", () => setLang(b.dataset.lang)));
 
-  // form → email draft (swap for Calendly / Formspree when live)
-  const form = document.getElementById("form");
-  if (form) form.addEventListener("submit", e => {
-    e.preventDefault();
-    const d = new FormData(form);
-    const body = [...d.entries()].map(([k, v]) => `${k}: ${v}`).join("\n");
-    const subj = Site.t("Free assessment — ", "Évaluation gratuite — ") + (d.get("company") || "");
-    location.href = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(subj)}&body=${encodeURIComponent(body)}`;
-  });
+  document.querySelectorAll("[data-calendly]").forEach(a => a.href = CALENDLY_URL);
 
   // reveal on scroll
   const io = new IntersectionObserver(es => es.forEach(x => { if (x.isIntersecting){ x.target.classList.add("in"); io.unobserve(x.target); } }), {threshold: .1});
